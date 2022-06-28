@@ -40,13 +40,14 @@ public class StockUI extends javax.swing.JFrame {
 
             while (rs.next()) {
 
-                String spID = String.valueOf(rs.getInt("SparePartID"));
-                String spName = rs.getString("NameofItem");
-                String spCategory = rs.getString("Category");
-                String spBrand = rs.getString("Brand");
-                String spQuantity = String.valueOf(rs.getInt("Quantity"));
+                String itemID = String.valueOf(rs.getInt("ItemID"));
+                String itemName = rs.getString("Item Name");
+                String quantity = String.valueOf(rs.getInt("Quantity"));
+                String price = String.valueOf(rs.getDouble("Price"));
+                String netPrice = String.valueOf(rs.getDouble("Net Price"));
+                String supplier = rs.getString("Supplier");
 
-                String[] tbData = {spID, spName, spCategory, spBrand, spQuantity};
+                String[] tbData = {itemID, itemName, quantity, price, netPrice, supplier};
                 DefaultTableModel dtm2 = (DefaultTableModel) jTable1.getModel();
                 dtm2.addRow(tbData);
 
