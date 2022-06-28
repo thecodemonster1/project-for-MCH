@@ -1,5 +1,9 @@
 package View;
 
+import java.sql.*;
+import javax.swing.JOptionPane;
+import net.proteanit.sql.DbUtils;
+
 /**
  *
  * @author theCodeMonster
@@ -24,17 +28,17 @@ public class ModStockUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        idBox = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        nameBox = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        quantityBox = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        priceBox = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        npriceBox = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        suppBox = new javax.swing.JTextField();
         kButton1 = new com.k33ptoo.components.KButton();
         kButton2 = new com.k33ptoo.components.KButton();
         kButton3 = new com.k33ptoo.components.KButton();
@@ -48,54 +52,54 @@ public class ModStockUI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel2.setText("ItemID");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        idBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                idBoxActionPerformed(evt);
             }
         });
 
         jLabel3.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel3.setText("Item Name");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        nameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                nameBoxActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel4.setText("Quantity");
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        quantityBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                quantityBoxActionPerformed(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel5.setText("Price");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        priceBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                priceBoxActionPerformed(evt);
             }
         });
 
         jLabel6.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel6.setText("Net Price");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        npriceBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                npriceBoxActionPerformed(evt);
             }
         });
 
         jLabel7.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel7.setText("Supplier");
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        suppBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                suppBoxActionPerformed(evt);
             }
         });
 
@@ -136,6 +140,11 @@ public class ModStockUI extends javax.swing.JFrame {
         kButton3.setkHoverStartColor(new java.awt.Color(0, 255, 255));
         kButton3.setkPressedColor(new java.awt.Color(255, 51, 51));
         kButton3.setkStartColor(new java.awt.Color(0, 102, 153));
+        kButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton3ActionPerformed(evt);
+            }
+        });
 
         kButton4.setBorder(null);
         kButton4.setText("Search Item");
@@ -166,12 +175,12 @@ public class ModStockUI extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField6)
-                    .addComponent(jTextField5)
-                    .addComponent(jTextField4)
-                    .addComponent(jTextField3)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(suppBox)
+                    .addComponent(npriceBox)
+                    .addComponent(priceBox)
+                    .addComponent(quantityBox)
+                    .addComponent(nameBox)
+                    .addComponent(idBox, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(kButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -194,30 +203,30 @@ public class ModStockUI extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(idBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(15, 15, 15)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nameBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(quantityBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(priceBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(npriceBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(suppBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(51, 51, 51))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(kButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -238,33 +247,92 @@ public class ModStockUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void idBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_idBoxActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void nameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_nameBoxActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void quantityBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_quantityBoxActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void priceBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_priceBoxActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void npriceBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_npriceBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_npriceBoxActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void suppBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suppBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_suppBoxActionPerformed
 
     private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_kButton1ActionPerformed
+
+    private void kButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton3ActionPerformed
+        try {
+
+            String strItemId = idBox.getText();
+            int itemID = Integer.parseInt(strItemId);
+            if (strItemId.isEmpty() || strItemId.isBlank()) {
+                itemID = 0;
+            }
+
+            String itemName = nameBox.getText();
+
+            String strQuantity = quantityBox.getText();
+            int quantity = Integer.parseInt(strQuantity);
+            if (strQuantity.isEmpty() || strQuantity.isBlank()) {
+                quantity = 0;
+            }
+
+            String strPrice = priceBox.getText();
+            double price = Double.parseDouble(strPrice);
+            if (strPrice.isEmpty() || strPrice.isBlank()) {
+                price = 0;
+            }
+
+//                String strNetPrice = npriceBox.getText();
+            double netPrice = (quantity * price);
+
+            String supplier = suppBox.getText();
+
+            Connection conn;
+            Statement st = null;
+            int updateQuery = 0;
+            ResultSet rs = null;
+            // create our mysql database connection
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/mch", "root", "");
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // our SQL SELECT query.
+            String query = "INSERT INTO stocktable VALUES (" + itemID + ", '" + itemName + "', " + quantity + ", " + price + ", " + netPrice + ", '" + supplier + "');";
+            // create the java statement
+//                st = conn.createStatement(query);
+            st = conn.createStatement();
+
+            // execute the query, and get a java resultset
+            updateQuery = st.executeUpdate(query);
+//            rs = (ResultSet) st.executeQuery(query);
+            
+            
+            System.out.println("Connection Successfull...3\n");
+
+            st.close();
+            conn.close();
+
+        } catch (Exception e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e);
+        }
+//            clearField();
+    }//GEN-LAST:event_kButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,6 +370,7 @@ public class ModStockUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField idBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -311,15 +380,14 @@ public class ModStockUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private com.k33ptoo.components.KButton kButton1;
     private com.k33ptoo.components.KButton kButton2;
     private com.k33ptoo.components.KButton kButton3;
     private com.k33ptoo.components.KButton kButton4;
+    private javax.swing.JTextField nameBox;
+    private javax.swing.JTextField npriceBox;
+    private javax.swing.JTextField priceBox;
+    private javax.swing.JTextField quantityBox;
+    private javax.swing.JTextField suppBox;
     // End of variables declaration//GEN-END:variables
 }
