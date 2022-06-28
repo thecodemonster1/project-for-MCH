@@ -202,7 +202,7 @@ public class LogInUI extends javax.swing.JFrame {
                     lbl.setText("Incorrect Password or ID");
                 }
                 
-                JOptionPane.showMessageDialog(rootPane, get+"\tSuccess", "Success", 1);
+//                JOptionPane.showMessageDialog(rootPane, get+"\tSuccess", "Success", 1);
                 System.out.println("Connection Successfull...2\n");
 
                 st.close();
