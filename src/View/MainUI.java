@@ -29,21 +29,40 @@ public class MainUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        kButton2.setText("Invoice");
+        kButton2.setText("Stock");
         kButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton2.setkBorderRadius(50);
-        getContentPane().add(kButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(918, 271, 109, -1));
+        kButton2.setkEndColor(new java.awt.Color(153, 153, 0));
+        kButton2.setkHoverEndColor(new java.awt.Color(0, 204, 204));
+        kButton2.setkHoverForeGround(new java.awt.Color(0, 0, 0));
+        kButton2.setkHoverStartColor(new java.awt.Color(0, 255, 153));
+        kButton2.setkStartColor(new java.awt.Color(102, 204, 0));
+        getContentPane().add(kButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 150, 109, -1));
 
         kButton3.setText("Invoice");
         kButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton3.setkBorderRadius(50);
-        getContentPane().add(kButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(918, 334, 109, -1));
+        kButton3.setkEndColor(new java.awt.Color(153, 153, 0));
+        kButton3.setkHoverEndColor(new java.awt.Color(0, 204, 204));
+        kButton3.setkHoverForeGround(new java.awt.Color(0, 0, 0));
+        kButton3.setkHoverStartColor(new java.awt.Color(0, 255, 153));
+        kButton3.setkStartColor(new java.awt.Color(102, 204, 0));
+        kButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(kButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 230, 109, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Photos/background.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 800));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void kButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kButton3ActionPerformed
 
     /**
      * @param args the command line arguments
