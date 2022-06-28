@@ -275,6 +275,7 @@ public class SignUpUI extends javax.swing.JFrame {
         jLabel11.setText("Password");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 121, 30));
 
+        kButton1.setBackground(new java.awt.Color(0, 0, 0));
         kButton1.setText("Register");
         kButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton1.setkBorderRadius(50);

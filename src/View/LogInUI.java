@@ -94,6 +94,7 @@ public class LogInUI extends javax.swing.JFrame {
         passBox.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jPanel1.add(passBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 210, 32));
 
+        kButton1.setBackground(new java.awt.Color(0, 0, 0));
         kButton1.setText("LogIn");
         kButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton1.setkBorderRadius(50);
@@ -110,6 +111,7 @@ public class LogInUI extends javax.swing.JFrame {
         });
         jPanel1.add(kButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 135, 50));
 
+        kButton2.setBackground(new java.awt.Color(0, 0, 0));
         kButton2.setText("SignUp");
         kButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton2.setkBorderRadius(50);

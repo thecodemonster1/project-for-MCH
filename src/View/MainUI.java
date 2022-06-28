@@ -33,6 +33,7 @@ public class MainUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        kButton2.setBackground(new java.awt.Color(0, 0, 0));
         kButton2.setText("Stock");
         kButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton2.setkBorderRadius(50);
@@ -48,6 +49,7 @@ public class MainUI extends javax.swing.JFrame {
         });
         getContentPane().add(kButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 60, 109, -1));
 
+        kButton3.setBackground(new java.awt.Color(0, 0, 0));
         kButton3.setText("Invoice");
         kButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton3.setkBorderRadius(50);
@@ -63,6 +65,7 @@ public class MainUI extends javax.swing.JFrame {
         });
         getContentPane().add(kButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 220, 109, -1));
 
+        kButton4.setBackground(new java.awt.Color(0, 0, 0));
         kButton4.setText("Invoice");
         kButton4.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton4.setkBorderRadius(50);
@@ -78,6 +81,7 @@ public class MainUI extends javax.swing.JFrame {
         });
         getContentPane().add(kButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 300, 109, -1));
 
+        kButton5.setBackground(new java.awt.Color(0, 0, 0));
         kButton5.setText("Invoice");
         kButton5.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton5.setkBorderRadius(50);
@@ -93,6 +97,7 @@ public class MainUI extends javax.swing.JFrame {
         });
         getContentPane().add(kButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 380, 109, -1));
 
+        kButton6.setBackground(new java.awt.Color(0, 0, 0));
         kButton6.setText("Invoice");
         kButton6.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton6.setkBorderRadius(50);
@@ -108,6 +113,7 @@ public class MainUI extends javax.swing.JFrame {
         });
         getContentPane().add(kButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 450, 109, -1));
 
+        kButton7.setBackground(new java.awt.Color(0, 0, 0));
         kButton7.setText("Invoice");
         kButton7.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton7.setkBorderRadius(50);
