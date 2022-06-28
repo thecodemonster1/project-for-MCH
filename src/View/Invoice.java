@@ -39,14 +39,14 @@ public class Invoice extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(382, 382, 382)
                 .addComponent(jLabel1)
-                .addContainerGap(680, Short.MAX_VALUE))
+                .addContainerGap(775, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(211, 211, 211)
                 .addComponent(jLabel1)
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addContainerGap(420, Short.MAX_VALUE))
         );
 
         pack();
