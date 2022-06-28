@@ -2,6 +2,7 @@ package View;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
 
 /**
@@ -16,6 +17,12 @@ public class ModStockUI extends javax.swing.JFrame {
     public ModStockUI() {
         initComponents();
     }
+    
+//==========================================Functions================================================================
+    
+    
+    
+//==========================================End Functions============================================================
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -320,8 +327,7 @@ public class ModStockUI extends javax.swing.JFrame {
             // execute the query, and get a java resultset
             updateQuery = st.executeUpdate(query);
 //            rs = (ResultSet) st.executeQuery(query);
-            
-            
+
             System.out.println("Connection Successfull...3\n");
 
             st.close();
@@ -332,6 +338,10 @@ public class ModStockUI extends javax.swing.JFrame {
             System.err.println(e);
         }
 //            clearField();
+        
+        StockUI stock = new StockUI();
+        stock.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_kButton3ActionPerformed
 
     /**
