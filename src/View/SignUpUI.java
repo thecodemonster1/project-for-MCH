@@ -220,11 +220,11 @@ public class SignUpUI extends javax.swing.JFrame {
 
         slctMonth.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         slctMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", " " }));
-        jPanel1.add(slctMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, 110, 30));
+        jPanel1.add(slctMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, 130, 30));
 
         slctDay.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         slctDay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        jPanel1.add(slctDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 200, 60, 30));
+        jPanel1.add(slctDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 200, 70, 30));
 
         lblDob.setFont(new java.awt.Font("Lao Sangam MN", 0, 20)); // NOI18N
         lblDob.setForeground(new java.awt.Color(255, 255, 255));
@@ -233,7 +233,7 @@ public class SignUpUI extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Lao Sangam MN", 0, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Day");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 170, 70, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 170, 70, 30));
 
         jLabel9.setFont(new java.awt.Font("Lao Sangam MN", 0, 20)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
