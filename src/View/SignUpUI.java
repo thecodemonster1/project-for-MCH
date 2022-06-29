@@ -496,7 +496,7 @@ public class SignUpUI extends javax.swing.JFrame {
 //
 //                // execute the query, and get a java resultset
 //                updateQuery = st.executeUpdate(query);
-//                JOptionPane.showMessageDialog(rootPane, "You Successfully Registered", "Success", 1);
+////                JOptionPane.showMessageDialog(rootPane, "You Successfully Registered", "Success", 1);
 //                System.out.println("Connection Successfull...");
 //
 //                st.close();
