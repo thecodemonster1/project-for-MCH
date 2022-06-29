@@ -283,6 +283,8 @@ public class ModStockUI extends javax.swing.JFrame {
     }//GEN-LAST:event_kButton1ActionPerformed
 
     private void kButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton3ActionPerformed
+ 
+//=========================================Begining of Variables=========================================
         try {
 
             String strItemId = idBox.getText();
@@ -309,6 +311,8 @@ public class ModStockUI extends javax.swing.JFrame {
             double netPrice = (quantity * price);
 
             String supplier = suppBox.getText();
+            
+//=========================================End of Variables=========================================
 
             Connection conn;
             Statement st = null;
