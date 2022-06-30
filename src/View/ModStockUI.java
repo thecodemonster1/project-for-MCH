@@ -343,9 +343,9 @@ public class ModStockUI extends javax.swing.JFrame {
         }
 //            clearField();
         
-        StockUI stock = new StockUI();
-        stock.setVisible(true);
-        this.setVisible(false);
+//        StockUI stock = new StockUI();
+//        stock.setVisible(true);
+//        this.setVisible(false);
     }//GEN-LAST:event_kButton3ActionPerformed
 
     /**
