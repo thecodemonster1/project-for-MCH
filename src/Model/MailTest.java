@@ -26,6 +26,7 @@ public class MailTest {
         //Sending test email
         email.createAndSendEmail("it21730160@gmail.com", "Test email subject",
                 "<h1>This mail is from my java project</h1>"
+                        + "<h2>Assalaamu alaikkum world, this is the second heading...</h2>"
                         + "");
     }
 
