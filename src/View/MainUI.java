@@ -160,9 +160,9 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_kButton7ActionPerformed
 
     private void kButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton2ActionPerformed
-        StockUI stock = new StockUI();
-        stock.setVisible(true);
-        this.setVisible(false);
+//        StockUI stock = new StockUI();
+//        stock.setVisible(true);
+//        this.setVisible(false);
     }//GEN-LAST:event_kButton2ActionPerformed
 
     /**
