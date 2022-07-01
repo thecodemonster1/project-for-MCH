@@ -1,5 +1,6 @@
 package View;
 
+import java.awt.Color;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -16,6 +17,7 @@ public class ModStockUI extends javax.swing.JFrame {
      */
     public ModStockUI() {
         initComponents();
+        jPanel1.setBackground(new Color(0f, 0f, 0f, 0.8f));
     }
     
 //==========================================Functions================================================================
@@ -56,7 +58,10 @@ public class ModStockUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+
         jLabel2.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ItemID");
 
         idBox.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +71,7 @@ public class ModStockUI extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Item Name");
 
         nameBox.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +81,7 @@ public class ModStockUI extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Quantity");
 
         quantityBox.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +91,7 @@ public class ModStockUI extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Price");
 
         priceBox.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +101,7 @@ public class ModStockUI extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Net Price");
 
         npriceBox.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +111,7 @@ public class ModStockUI extends javax.swing.JFrame {
         });
 
         jLabel7.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Supplier");
 
         suppBox.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +175,7 @@ public class ModStockUI extends javax.swing.JFrame {
         kButton4.setkStartColor(new java.awt.Color(0, 102, 153));
 
         jLabel8.setFont(new java.awt.Font("October Condensed Devanagari", 1, 48)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Modify Item");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
