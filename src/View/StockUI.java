@@ -62,12 +62,29 @@ public class StockUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        kButton1 = new com.k33ptoo.components.KButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kButton1.setText("Back");
+        kButton1.setBorderPainted(false);
+        kButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 20)); // NOI18N
+        kButton1.setkBorderRadius(50);
+        kButton1.setkEndColor(new java.awt.Color(255, 0, 102));
+        kButton1.setkHoverEndColor(new java.awt.Color(0, 255, 204));
+        kButton1.setkHoverForeGround(new java.awt.Color(0, 0, 0));
+        kButton1.setkHoverStartColor(new java.awt.Color(0, 255, 102));
+        kButton1.setkStartColor(new java.awt.Color(204, 0, 255));
+        kButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(kButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 560, 100, 40));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -89,6 +106,12 @@ public class StockUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton1ActionPerformed
+        ModStockUI modUI = new ModStockUI();
+        modUI.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_kButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,5 +152,6 @@ public class StockUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private com.k33ptoo.components.KButton kButton1;
     // End of variables declaration//GEN-END:variables
 }
