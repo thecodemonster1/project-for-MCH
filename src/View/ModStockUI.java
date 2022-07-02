@@ -173,6 +173,11 @@ public class ModStockUI extends javax.swing.JFrame {
         kButton4.setkHoverStartColor(new java.awt.Color(0, 255, 255));
         kButton4.setkPressedColor(new java.awt.Color(255, 51, 51));
         kButton4.setkStartColor(new java.awt.Color(0, 102, 153));
+        kButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("October Condensed Devanagari", 1, 48)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -359,6 +364,11 @@ public class ModStockUI extends javax.swing.JFrame {
         stock.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_kButton3ActionPerformed
+
+    private void kButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton4ActionPerformed
+        searchUI search = new searchUI();
+        search.setVisible(true);
+    }//GEN-LAST:event_kButton4ActionPerformed
 
     /**
      * @param args the command line arguments
