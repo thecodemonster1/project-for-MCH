@@ -158,7 +158,9 @@ public class StockUI extends javax.swing.JFrame {
     }//GEN-LAST:event_kButton3ActionPerformed
 
     private void kButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton4ActionPerformed
-        // TODO add your handling code here:
+        searchUI search = new searchUI();
+        search.setVisible(true);
+        
     }//GEN-LAST:event_kButton4ActionPerformed
 
     /**
