@@ -203,7 +203,9 @@ public class ModStockUI extends javax.swing.JFrame {
     }//GEN-LAST:event_suppBoxActionPerformed
 
     private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton1ActionPerformed
-        // TODO add your handling code here:
+        StockUI stock = new StockUI();
+        stock.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_kButton1ActionPerformed
 
     private void kButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton3ActionPerformed
