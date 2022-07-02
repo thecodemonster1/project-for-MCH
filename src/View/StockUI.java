@@ -9,10 +9,6 @@ import net.proteanit.sql.DbUtils;
  * @author theCodeMonster
  */
 public class StockUI extends javax.swing.JFrame {
-    
-    public String[] header = new String[]{"Item ID", "Item Name", "Quantity", "Price", "Net Price", "Supplier"};
-    DefaultTableModel dtm;
-    public int row, col;
 
     /**
      * Creates new form StockUI
@@ -20,7 +16,7 @@ public class StockUI extends javax.swing.JFrame {
     public StockUI() {
         initComponents();
         showDetails();
-        
+
     }
 
 //================================================Functions======================================================
@@ -37,32 +33,20 @@ public class StockUI extends javax.swing.JFrame {
             jTable1.setModel(DbUtils.resultSetToTableModel((ResultSet) rs));
             System.out.println("Connection Successfull...4\n");
 
-//            while (rs.next()) {
-//
-//                String spID = String.valueOf(rs.getInt("SparePartID"));
-//                String spName = rs.getString("NameofItem");
-//                String spCategory = rs.getString("Category");
-//                String spBrand = rs.getString("Brand");
-//                String spQuantity = String.valueOf(rs.getInt("Quantity"));
-//
-//                String[] tbData = {spID, spName, spCategory, spBrand, spQuantity};
-//                DefaultTableModel dtm2 = (DefaultTableModel) jTable1.getModel();
-//                dtm2.addRow(tbData);
-//
-//            }
-
-        
-
         } catch (Exception ex) {
             System.err.println(ex);
         }
     }
 //================================================End Functions==================================================
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         kButton1 = new com.k33ptoo.components.KButton();
+        kButton2 = new com.k33ptoo.components.KButton();
+        kButton3 = new com.k33ptoo.components.KButton();
+        kButton4 = new com.k33ptoo.components.KButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -70,9 +54,10 @@ public class StockUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        kButton1.setBorder(null);
         kButton1.setText("Back");
         kButton1.setBorderPainted(false);
-        kButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 20)); // NOI18N
+        kButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         kButton1.setkBorderRadius(50);
         kButton1.setkEndColor(new java.awt.Color(255, 0, 102));
         kButton1.setkHoverEndColor(new java.awt.Color(0, 255, 204));
@@ -84,7 +69,58 @@ public class StockUI extends javax.swing.JFrame {
                 kButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(kButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 560, 100, 40));
+        getContentPane().add(kButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 560, 100, 40));
+
+        kButton2.setBorder(null);
+        kButton2.setText("Update");
+        kButton2.setBorderPainted(false);
+        kButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
+        kButton2.setkBorderRadius(50);
+        kButton2.setkEndColor(new java.awt.Color(255, 102, 0));
+        kButton2.setkHoverEndColor(new java.awt.Color(102, 255, 153));
+        kButton2.setkHoverForeGround(new java.awt.Color(0, 0, 0));
+        kButton2.setkHoverStartColor(new java.awt.Color(51, 255, 255));
+        kButton2.setkStartColor(new java.awt.Color(204, 51, 0));
+        kButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(kButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 560, 120, 40));
+
+        kButton3.setBorder(null);
+        kButton3.setText("Delete");
+        kButton3.setBorderPainted(false);
+        kButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
+        kButton3.setkBorderRadius(50);
+        kButton3.setkEndColor(new java.awt.Color(255, 102, 0));
+        kButton3.setkHoverEndColor(new java.awt.Color(102, 255, 153));
+        kButton3.setkHoverForeGround(new java.awt.Color(0, 0, 0));
+        kButton3.setkHoverStartColor(new java.awt.Color(51, 255, 255));
+        kButton3.setkStartColor(new java.awt.Color(204, 51, 0));
+        kButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(kButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 560, 120, 40));
+
+        kButton4.setBorder(null);
+        kButton4.setText("Search");
+        kButton4.setBorderPainted(false);
+        kButton4.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
+        kButton4.setkBorderRadius(50);
+        kButton4.setkEndColor(new java.awt.Color(255, 102, 0));
+        kButton4.setkHoverEndColor(new java.awt.Color(102, 255, 153));
+        kButton4.setkHoverForeGround(new java.awt.Color(0, 0, 0));
+        kButton4.setkHoverStartColor(new java.awt.Color(51, 255, 255));
+        kButton4.setkStartColor(new java.awt.Color(204, 51, 0));
+        kButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(kButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 560, 120, 40));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -99,7 +135,7 @@ public class StockUI extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 42, 1114, 571));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 1114, 480));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Photos/background.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 800));
@@ -112,6 +148,18 @@ public class StockUI extends javax.swing.JFrame {
         modUI.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_kButton1ActionPerformed
+
+    private void kButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kButton2ActionPerformed
+
+    private void kButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kButton3ActionPerformed
+
+    private void kButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,5 +201,8 @@ public class StockUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private com.k33ptoo.components.KButton kButton1;
+    private com.k33ptoo.components.KButton kButton2;
+    private com.k33ptoo.components.KButton kButton3;
+    private com.k33ptoo.components.KButton kButton4;
     // End of variables declaration//GEN-END:variables
 }
