@@ -84,6 +84,7 @@ public class searchUI extends javax.swing.JFrame {
         getContentPane().add(kGradientPanel1);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton1ActionPerformed
