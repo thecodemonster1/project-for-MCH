@@ -2,6 +2,7 @@ package View;
 
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
+import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -18,33 +19,39 @@ public class StockUI extends javax.swing.JFrame {
      */
     public StockUI() {
         initComponents();
+        showDetails();
         
     }
 
 //================================================Functions======================================================
-    public void showData() {
+    public void showDetails() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/mch", "root", "");
 
-            Statement st = conn.createStatement();
+            Statement st = null;
             // sql query
             String query = "SELECT * FROM stocktable";
+            st = conn.prepareStatement(query);
             ResultSet rs = st.executeQuery(query);
+            jTable1.setModel(DbUtils.resultSetToTableModel((ResultSet) rs));
+            System.out.println("Connection Successfull...4\n");
 
-            while (rs.next()) {
+//            while (rs.next()) {
+//
+//                String spID = String.valueOf(rs.getInt("SparePartID"));
+//                String spName = rs.getString("NameofItem");
+//                String spCategory = rs.getString("Category");
+//                String spBrand = rs.getString("Brand");
+//                String spQuantity = String.valueOf(rs.getInt("Quantity"));
+//
+//                String[] tbData = {spID, spName, spCategory, spBrand, spQuantity};
+//                DefaultTableModel dtm2 = (DefaultTableModel) jTable1.getModel();
+//                dtm2.addRow(tbData);
+//
+//            }
 
-                String spID = String.valueOf(rs.getInt("SparePartID"));
-                String spName = rs.getString("NameofItem");
-                String spCategory = rs.getString("Category");
-                String spBrand = rs.getString("Brand");
-                String spQuantity = String.valueOf(rs.getInt("Quantity"));
-
-                String[] tbData = {spID, spName, spCategory, spBrand, spQuantity};
-                DefaultTableModel dtm2 = (DefaultTableModel) jTable1.getModel();
-                dtm2.addRow(tbData);
-
-            }
+        
 
         } catch (Exception ex) {
             System.err.println(ex);
