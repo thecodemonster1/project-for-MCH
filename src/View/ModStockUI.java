@@ -310,7 +310,7 @@ public class ModStockUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField idBox;
+    public static javax.swing.JTextField idBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -322,10 +322,10 @@ public class ModStockUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private com.k33ptoo.components.KButton kButton1;
     private com.k33ptoo.components.KButton kButton3;
-    private javax.swing.JTextField nameBox;
-    private javax.swing.JTextField npriceBox;
-    private javax.swing.JTextField priceBox;
-    private javax.swing.JTextField quantityBox;
-    private javax.swing.JTextField suppBox;
+    public static javax.swing.JTextField nameBox;
+    public static javax.swing.JTextField npriceBox;
+    public static javax.swing.JTextField priceBox;
+    public static javax.swing.JTextField quantityBox;
+    public static javax.swing.JTextField suppBox;
     // End of variables declaration//GEN-END:variables
 }
