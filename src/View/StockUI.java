@@ -3,6 +3,7 @@ package View;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
+import View.ModStockUI;
 
 /**
  *
@@ -10,12 +11,21 @@ import net.proteanit.sql.DbUtils;
  */
 public class StockUI extends javax.swing.JFrame {
 
+    public String[] header = new String[]{"Item ID", "Item Name", "Quantity", "Price", "Net Price", "Supplier"};
+    DefaultTableModel dtm;
+    int row, col;
+    ModStockUI modStock;
+    
     /**
      * Creates new form StockUI
      */
     public StockUI() {
         initComponents();
         showDetails();
+        
+        modStock = new ModStockUI();
+        
+        
 
     }
 
@@ -133,6 +143,11 @@ public class StockUI extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 1114, 480));
@@ -150,11 +165,15 @@ public class StockUI extends javax.swing.JFrame {
     }//GEN-LAST:event_kButton1ActionPerformed
 
     private void kButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton2ActionPerformed
-        // TODO add your handling code here:
+        ModStockUI mod = new ModStockUI();
+        mod.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_kButton2ActionPerformed
 
     private void kButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton3ActionPerformed
-        // TODO add your handling code here:
+        ModStockUI modUI = new ModStockUI();
+        modUI.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_kButton3ActionPerformed
 
     private void kButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton4ActionPerformed
@@ -162,6 +181,30 @@ public class StockUI extends javax.swing.JFrame {
         search.setVisible(true);
         
     }//GEN-LAST:event_kButton4ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        row = jTable1.getSelectedRow();
+        System.out.println("Row = "+row);
+        modStock.idBox.setText(dtm.getValueAt(row, 0).toString());
+        modStock.nameBox.setText(dtm.getValueAt(row, 1).toString());
+        modStock.quantityBox.setText(dtm.getValueAt(row, 2).toString());
+        modStock.priceBox.setText(dtm.getValueAt(row, 3).toString());
+        modStock.npriceBox.setText(dtm.getValueAt(row, 4).toString());
+        modStock.suppBox.setText(dtm.getValueAt(row, 5).toString());
+        
+        
+        
+//        spIDBox.setText(dtm.getValueAt(row, 0).toString());
+//        spNameBox.setText(dtm.getValueAt(row, 1).toString());
+//        String category = dtm.getValueAt(row, 2).toString();
+//        spBrandBox.setText(dtm.getValueAt(row, 3).toString());
+//        spQuantityBox.setText(dtm.getValueAt(row, 4).toString());
+//        for (int i = 0; i < (spCategoryBox.getItemCount()); i++) {
+//            if (spCategoryBox.getItemAt(i).equalsIgnoreCase(category)) {
+//                spCategoryBox.setSelectedIndex(i);
+//            }
+//        }
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments
